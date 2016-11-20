@@ -8,9 +8,12 @@ end
 
 execute 'unzip_yml' do
   command 'gunzip nubootstrap.yml.gz'
-  owner 'ec2-user'
-  group 'ec2-user'
   cwd '/home/ec2-user/'
+  action :run
+end
+
+execute 'change_permissions' do
+  command 'chown -R ec2-user. /home/ec2-user/'
   action :run
 end
 
