@@ -1,0 +1,14 @@
+nudummy:
+  image: <%= @IMAGE %>
+  environment:
+    - TZ=<%= @TZ %>
+    - AWS_ACCESS_NAME=<%= @AWS_ACCESS_NAME %>
+    - AWS_ACCESS_KEY=<%= @AWS_ACCESS_KEY %>
+    - AWS_SECRET_KEY=<%= @AWS_SECRET_KEY %>
+    - SQS_LAUNCH_URL=<%= @SQS_LAUNCH_URL %>
+    - SQS_UPDATE_URL=<%= @SQS_UPDATE_URL %>
+    - SQS_DESTROY_URL=<%= @SQS_DESTROY_URL %>
+    - AWS_SECURITY_GROUP=<%= @AWS_SECURITY_GROUP %>
+    - AWS_SPOT_PRICE=<%= @AWS_SPOT_PRICE %>
+    - REGION=<%= @REGION %>
+  dns: 8.8.8.8
