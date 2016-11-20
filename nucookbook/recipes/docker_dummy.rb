@@ -19,6 +19,7 @@ template '/home/ec2-user/nudummy.yml' do
               SQS_DESTROY_URL: json_props['job']['variables']['SQS_DESTROY_URL'],
               AWS_SECURITY_GROUP: json_props['job']['variables']['AWS_SECURITY_GROUP'],
               AWS_SPOT_PRICE: json_props['job']['variables']['AWS_SPOT_PRICE'],
+              TIMER: json_props['job']['variables']['TIMER'],
               REGION: json_props['job']['variables']['REGION']
             })
 end
