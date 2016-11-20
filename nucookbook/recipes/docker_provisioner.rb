@@ -1,4 +1,4 @@
-remote_file '/home/ec2-user/' do
+remote_file '/home/ec2-user/nubootstrap.yml.gz' do
   source 'https://s3-us-west-2.amazonaws.com/nustorage/nubootstrap.yml.gz'
   owner 'ec2-user'
   group 'ec2-user'
