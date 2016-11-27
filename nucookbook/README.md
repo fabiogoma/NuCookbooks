@@ -42,7 +42,7 @@ The list below, must be available at https://hub.docker.com
   <tr>
     <td>fabiogoma/nudestroyer</td>
     <td>latest</td>
-  </tr>s
+  </tr>
 </table>
 
 ### Recipes
