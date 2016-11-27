@@ -1,18 +1,14 @@
 # nucookbook Cookbook
 
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This cookbook is used to provision AWS EC2 instances
 
 ## Requirements
 
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+Requirements for this cookbook are:
 
-e.g.
 ### Platforms
 
-- SandwichOS
+- Linux (RHEL based SO)
 
 ### Chef
 
@@ -20,27 +16,49 @@ e.g.
 
 ### Cookbooks
 
-- `toaster` - nucookbook needs toaster to brown your bagel.
+- `none` - nucookbook doesn't needs any other cookbook to run.
 
-## Attributes
+## Docker images
 
-TODO: List your cookbook attributes here.
-
-e.g.
-### nucookbook::default
+The list below, must be available at https://hub.docker.com
 
 <table>
   <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
+    <th>Image</th>
+    <th>Version</th>
   </tr>
   <tr>
-    <td><tt>['nucookbook']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td>fabiogoma/nudummy</td>
+    <td>latest</td>
+  </tr>
+  <tr>
+    <td>fabiogoma/nuprovisioner</td>
+    <td>latest</td>
+  </tr>
+  <tr>
+    <td>fabiogoma/nuscheduler</td>
+    <td>latest</td>
+  </tr>
+  <tr>
+    <td>fabiogoma/nudestroyer</td>
+    <td>latest</td>
+  </tr>s
+</table>
+
+### Recipes
+
+<table>
+  <tr>
+    <th>name</th>
+  </tr>
+  <tr>
+    <td><tt>['nucookbook']['docker_install']</tt></td>
+  </tr>
+    <tr>
+    <td><tt>['nucookbook']['docker_provisioner']</tt></td>
+  </tr>
+    <tr>
+    <td><tt>['nucookbook']['docker_dummy']</tt></td>
   </tr>
 </table>
 
@@ -48,33 +66,4 @@ e.g.
 
 ### nucookbook::default
 
-TODO: Write usage instructions for each cookbook.
-
-e.g.
-Just include `nucookbook` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[nucookbook]"
-  ]
-}
-```
-
-## Contributing
-
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
-
-## License and Authors
-
-Authors: TODO: List authors
-
+The recipes will be used by OpsWorks and Chef Zero, no Chef Server infrastructure are needed
