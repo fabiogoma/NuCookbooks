@@ -64,6 +64,8 @@ The list below, must be available at https://hub.docker.com
 
 ## Usage
 
-### nucookbook::default
+### nucookbook::docker_install
+### nucookbook::docker_provisioner
+### nucookbook::docker_dummy
 
 The recipes will be used by OpsWorks and Chef Zero, no Chef Server infrastructure are needed
